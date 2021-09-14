@@ -26,6 +26,7 @@ app.use(cors({
   origin: process.env.ORIGIN,
   optionsSuccessStatus: 200
 }));
+app.use(express.static('public'));
 
 app.get("/", (_, res) => res.send("Hello world"));
 app.use('/api/auth', authRoutes);
